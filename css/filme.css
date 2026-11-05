@@ -1,0 +1,533 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: #080808;
+    color: white;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.navbar-orion {
+    min-height: 70px;
+    padding: 0 30px;
+    background-color: #111111 !important;
+}
+
+.logo {
+    color: white !important;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+
+
+.banner-filme {
+    position: relative;
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(45%);
+}
+
+.banner-escuro {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.1)
+    );
+}
+
+.banner-conteudo {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 80px;
+
+    z-index: 2;
+}
+
+.titulo-filme {
+    font-size: 64px;
+    font-weight: 400;
+
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.informacoes-filme {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.botoes-filme {
+    display: flex;
+    gap: 12px;
+}
+
+
+
+
+.detalhes-filme {
+    margin-top: 45px;
+    margin-bottom: 60px;
+}
+
+
+
+
+.abas-filme {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+.abas-filme .nav-link {
+    color: #999;
+    background: transparent;
+
+    border: none;
+
+    font-size: 18px;
+
+    padding: 12px 20px;
+}
+
+.abas-filme .nav-link:hover {
+    color: white;
+}
+
+.abas-filme .nav-link.active {
+    color: white;
+
+    background-color: #171717;
+
+    border: 1px solid #333;
+    border-bottom-color: #171717;
+}
+
+
+
+
+.poster-container {
+    text-align: center;
+}
+
+.poster-filme {
+    width: 100%;
+    max-width: 260px;
+    height: 390px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+.card-orion {
+    width: 100%;
+
+    padding: 28px;
+
+    background-color: #171717;
+
+    border: 1px solid #303030;
+
+    border-radius: 12px;
+}
+
+.card-orion h2 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.card-orion h3 {
+    font-size: 24px;
+
+    margin-bottom: 18px;
+}
+
+.card-orion p {
+    margin: 0;
+
+    color: #bdbdbd;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+}
+
+
+
+
+.comentarios {
+    width: 100%;
+
+    background-color: #111111;
+
+    padding: 30px;
+
+    border-radius: 12px;
+}
+
+.comentarios h2 {
+    font-size: 32px;
+
+    margin-bottom: 25px;
+}
+
+
+
+
+.comentario-form {
+    background-color: #171717;
+
+    border: 1px solid #303030;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+.comentario-form label {
+    display: block;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.comentario-form textarea {
+    background-color: #222222;
+
+    border: 1px solid #444;
+
+    color: white;
+
+    resize: vertical;
+}
+
+.comentario-form textarea:focus {
+    background-color: #222222;
+
+    color: white;
+
+    border-color: #0d6efd;
+
+    box-shadow: none;
+}
+
+.comentario-form textarea::placeholder {
+    color: #888;
+}
+
+
+
+
+.comentario {
+    background-color: #171717;
+
+    border: 1px solid #303030;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+}
+
+.usuario-comentario {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: #444;
+
+    border-radius: 50%;
+
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.usuario-comentario strong {
+    display: block;
+
+    font-size: 17px;
+}
+
+.usuario-comentario small {
+    color: #888;
+}
+
+.comentario p {
+    margin: 0;
+
+    color: #c5c5c5;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+
+
+@media (max-width: 900px) {
+
+    .banner-filme {
+        height: 500px;
+    }
+
+    .titulo-filme {
+        font-size: 52px;
+    }
+
+    .poster-filme {
+        max-width: 220px;
+        height: 330px;
+    }
+
+}
+
+
+
+
+@media (max-width: 600px) {
+
+  
+
+    .navbar-orion {
+        min-height: 62px;
+
+        padding: 0 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .navbar-orion .btn {
+        font-size: 14px;
+
+        padding: 7px 10px;
+    }
+
+
+ 
+
+    .banner-filme {
+        height: 400px;
+    }
+
+    .banner-img {
+        object-position: center;
+    }
+
+    .banner-escuro {
+        background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.2)
+        );
+    }
+
+    .banner-conteudo {
+        bottom: 30px;
+
+        padding: 0 20px;
+    }
+
+    .titulo-filme {
+        font-size: 40px;
+
+        margin-top: 10px;
+    }
+
+    .informacoes-filme {
+        font-size: 15px;
+
+        margin-bottom: 18px;
+    }
+
+    .botoes-filme {
+        gap: 8px;
+    }
+
+    .botoes-filme .btn {
+        font-size: 14px;
+
+        padding: 9px 12px;
+    }
+
+
+
+    .detalhes-filme {
+        margin-top: 30px;
+
+        padding: 0 16px;
+    }
+
+
+
+
+    .abas-filme {
+        margin-bottom: 25px;
+    }
+
+    .abas-filme .nav-link {
+        font-size: 15px;
+
+        padding: 10px 12px;
+    }
+
+
+
+    .poster-container {
+        margin-bottom: 25px;
+    }
+
+    .poster-filme {
+        width: 180px;
+        height: 270px;
+    }
+
+
+
+
+    .card-orion {
+        padding: 23px 20px;
+    }
+
+    .card-orion h2 {
+        font-size: 28px;
+
+        margin-bottom: 16px;
+    }
+
+    .card-orion h3 {
+        font-size: 22px;
+
+        margin-bottom: 13px;
+    }
+
+    .card-orion p {
+        font-size: 17px;
+
+        line-height: 1.5;
+    }
+
+
+
+    .comentarios {
+        padding: 20px 15px;
+    }
+
+    .comentarios h2 {
+        font-size: 27px;
+    }
+
+    .comentario-form {
+        padding: 18px;
+    }
+
+    .comentario {
+        padding: 18px;
+    }
+
+}
+
+
+
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .navbar-orion .btn {
+        font-size: 13px;
+    }
+
+    .banner-filme {
+        height: 360px;
+    }
+
+    .titulo-filme {
+        font-size: 34px;
+    }
+
+    .informacoes-filme {
+        font-size: 14px;
+    }
+
+    .botoes-filme .btn {
+        font-size: 13px;
+
+        padding: 8px 9px;
+    }
+
+    .poster-filme {
+        width: 160px;
+        height: 240px;
+    }
+
+}
+
+.contador-comentarios {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25rem;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+}

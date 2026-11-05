@@ -1,0 +1,12 @@
+{
+    "name": "quaiati/email",
+    "autoload": {
+        "psr-4": {
+            "Quaiati\\Email\\": "src/"
+        }
+    },
+    "require": {},
+    "config": {
+        "disable-tls": true
+    }
+}

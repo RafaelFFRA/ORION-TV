@@ -1,0 +1,585 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    background-color: #080808;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+}
+
+
+.btn-criar-conta:hover {
+    background-color: #006dcc;
+
+    border-color: #006dcc;
+
+    color: white;
+}
+
+
+
+
+.navbar-orion {
+    height: 75px;
+
+    background-color: #080808;
+
+    border-bottom: 1px solid #242424;
+
+    padding: 0 5%;
+}
+
+
+.logo {
+    color: #168cff !important;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.btn-voltar {
+    border-radius: 6px;
+
+    padding: 8px 18px;
+}
+
+
+
+.pagina {
+    padding: 45px 5% 70px;
+}
+
+
+
+.cabecalho {
+    margin-bottom: 30px;
+}
+
+
+.cabecalho h1 {
+    font-size: 32px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.cabecalho p {
+    color: #999;
+
+    font-size: 15px;
+}
+
+
+
+
+.filtros {
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+
+    width: 100%;
+}
+
+
+.filtro-busca {
+    position: relative;
+
+    flex: 1;
+
+    max-width: 500px;
+}
+
+
+.filtro-busca i {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #777;
+
+    font-size: 17px;
+}
+
+
+.filtro-busca input {
+    width: 100%;
+
+    height: 45px;
+
+    padding: 0 15px 0 43px;
+
+    background-color: #1b1b1b;
+
+    border: 1px solid #333;
+
+    border-radius: 7px;
+
+    color: white;
+
+    outline: none;
+}
+
+
+.filtro-busca input::placeholder {
+    color: #777;
+}
+
+
+.filtro-busca input:focus {
+    background-color: #1b1b1b;
+
+    color: white;
+
+    border-color: #168cff;
+
+    box-shadow: 0 0 0 2px rgba(22, 140, 255, 0.15);
+}
+
+
+.filtro-status {
+    height: 45px;
+
+    min-width: 200px;
+
+    padding: 0 15px;
+
+    background-color: #1b1b1b;
+
+    border: 1px solid #333;
+
+    border-radius: 7px;
+
+    color: white;
+
+    outline: none;
+}
+
+
+.filtro-status:focus {
+    background-color: #1b1b1b;
+
+    color: white;
+
+    border-color: #168cff;
+
+    box-shadow: 0 0 0 2px rgba(22, 140, 255, 0.15);
+}
+
+
+
+
+.card-assinatura {
+    width: 100%;
+
+    min-height: 390px;
+
+    background-color: #111111;
+
+    border: 1px solid #292929;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    transition: 0.2s;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.card-assinatura:hover {
+    border-color: #3b3b3b;
+
+    transform: translateY(-2px);
+}
+
+
+
+
+.cliente-topo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.avatar {
+    width: 55px;
+
+    height: 55px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: #222;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.avatar i {
+    color: #168cff;
+
+    font-size: 27px;
+}
+
+
+.cliente-topo h2 {
+    font-size: 19px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+.cliente-topo p {
+    color: #888;
+
+    font-size: 13px;
+
+    margin: 0;
+
+    word-break: break-word;
+}
+
+
+
+
+.situacao {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    margin-bottom: 25px;
+}
+
+
+.situacao span {
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+}
+
+
+
+
+.situacao.ativa {
+    color: #54d68c;
+
+    background-color: rgba(40, 167, 69, 0.12);
+}
+
+
+.situacao.ativa span {
+    background-color: #28a745;
+}
+
+
+
+
+.situacao.atrasada {
+    color: #ffc107;
+
+    background-color: rgba(255, 193, 7, 0.12);
+}
+
+
+.situacao.atrasada span {
+    background-color: #ffc107;
+}
+
+
+
+
+.situacao.suspensa {
+    color: #ff6b6b;
+
+    background-color: rgba(220, 53, 69, 0.12);
+}
+
+
+.situacao.suspensa span {
+    background-color: #dc3545;
+}
+
+
+
+.informacoes {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    padding-bottom: 25px;
+}
+
+
+.info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.info span {
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+.info strong {
+    color: #ddd;
+
+    font-size: 14px;
+
+    font-weight: normal;
+}
+
+
+
+
+.btn-suspender,
+.btn-reativar {
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 11px;
+
+    border-radius: 6px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+
+
+.btn-suspender {
+    background-color: transparent;
+
+    border: 1px solid #dc3545;
+
+    color: #ff6b6b;
+}
+
+
+.btn-suspender:hover {
+    background-color: #dc3545;
+
+    color: white;
+}
+
+
+
+
+.btn-reativar {
+    background-color: #168cff;
+
+    border: 1px solid #168cff;
+
+    color: white;
+}
+
+
+.btn-reativar:hover {
+    background-color: #006dcc;
+
+    border-color: #006dcc;
+}
+
+
+
+.modal-orion {
+    background-color: #181818;
+
+    color: white;
+
+    border: 1px solid #333;
+
+    border-radius: 12px;
+}
+
+
+.modal-orion .modal-header {
+    border-bottom: 1px solid #333;
+}
+
+
+.modal-orion .modal-footer {
+    border-top: 1px solid #333;
+}
+
+
+.modal-orion .modal-body {
+    padding: 25px;
+
+    color: #ccc;
+}
+
+
+.aviso {
+    color: #ff7777 !important;
+
+    font-size: 13px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .navbar-orion {
+        padding: 0 20px;
+    }
+
+
+    .pagina {
+        padding: 35px 20px 55px;
+    }
+
+
+    .filtros {
+        flex-direction: column;
+    }
+
+
+    .filtro-busca {
+        max-width: none;
+    }
+
+
+    .filtro-status {
+        width: 100%;
+    }
+
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    .navbar-orion {
+        height: 65px;
+
+        padding: 0 15px;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    .btn-voltar {
+        padding: 7px 12px;
+
+        font-size: 13px;
+    }
+
+
+    .pagina {
+        padding: 28px 14px 45px;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 26px;
+    }
+
+
+    .cabecalho p {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    .filtros {
+        margin-bottom: 25px;
+    }
+
+
+    .card-assinatura {
+        padding: 20px;
+
+        min-height: auto;
+    }
+
+
+    .cliente-topo h2 {
+        font-size: 17px;
+    }
+
+
+    .cliente-topo p {
+        font-size: 12px;
+    }
+
+
+    .informacoes {
+        gap: 20px 12px;
+    }
+
+
+    .info strong {
+        font-size: 13px;
+    }
+
+}
